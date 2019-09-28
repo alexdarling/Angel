@@ -5,11 +5,14 @@ module.exports = {
     
     var db = JSON.parse(fs.readFileSync('testcase.json','utf8'));
     
-    db.forEach(function(element){
-    	if(element.user == username){
-    		console.log("match");
+    for(var i = 0; i < db.length; i++){
+    	element = db[i];
+    	if((element.user == username)&&(element.password == password)){
+    		//console.log(element.id);
+    		return element.id;
     	}
-    });
+    }
+    return null;
     
   },
   bar: function () {
