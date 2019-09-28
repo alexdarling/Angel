@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+	<script>
+	
+	function saveCookie(){
+	
+		if(this.readyState ==4 && this.status == 200){
+			console.log(this.responseText);
+			document.cookie = "id="+this.responseText;
+			if(this.responseText!="null"){
+			
+				console.log("what's up?");
+			
+				window.open("/afterLogin","_self")
+			
+			}
+		}
+	
+	}
+	
+	function myFunction(){
+	
+		var username = document.getElementById("name").value;
+		var password = document.getElementById("password").value;
+		
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = saveCookie;
+		
+		xhttp.open("GET", "/login?username="+username+"&password="+password, true);
+		xhttp.send();
+		
+		
+	
+	}
+	</script>
+	
+	<form>
+		<fieldset>
+			<legend>Login:</legend>
+			username: <input id="name" type="text"><br>
+			password: <input id="password" type="text"><br>
+		</fieldset>
+	</form>
+	
+	<button onclick="myFunction()">submit</button>
+	
+</body>
+</html>
