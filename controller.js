@@ -35,7 +35,7 @@ http.createServer(function (req, res) {
 
         profile.createUser(type, fname, lname, imgurl, description, tags);
 
-
+        
 
 
 
