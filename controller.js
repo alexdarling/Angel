@@ -38,7 +38,7 @@ http.createServer(function (req, res) {
   */
   } else if (q.pathname == "/create-account") {
     var qdata = q.query;
-
+    
     var type = qdata.type;
     var fname = qdata.fname;
     var lname = qdata.lname;

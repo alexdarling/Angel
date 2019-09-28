@@ -30,6 +30,7 @@ module.exports = {
 
         file.set(`${newID}`, JSON.parse(`{"type":"${typeIn}","fName":"${fNameIn}","lName":"${lNameIn}","profileImage":"${imgUrlIn}","description":"${descIn}","tags":${tagArray}}`));
         file.save();
+        return 1 + "";
 
     },
     bar: function () {
