@@ -19,9 +19,9 @@ http.createServer(function (req, res) {
   	console.log(qdata.username);
   	console.log(qdata.password);
   	
-  	var id = login.validateLogin(qdata.username,qdata.password);
-    	res.write(""+id);
-    	res.end();
+		var id = login.validateLogin(qdata.username,qdata.password);
+		res.write(""+id);
+		res.end();
   	
   }
   /*
@@ -47,11 +47,32 @@ http.createServer(function (req, res) {
   
   }else{
   	var filePath = "."+q.pathname;
-  	fs.readFile(filePath, function(err, data) {
-    	res.writeHead(200, {'Content-Type': 'text/html'});
-    	res.write(data + "");
-    	res.end();
-  	});
+		if (filePath.endsWith("html") || filePath.endsWith("txt")) {
+			fs.readFile(filePath, function(err, data) {
+				res.writeHead(200, {'Content-Type': 'text/html'});
+				res.write(data + "");
+				res.end();
+			});
+		} else if (filePath.endsWith("css")) {
+			fs.readFile(filePath, function(err, data) {
+				res.writeHead(200, {'Content-Type': 'text/css'});
+				res.write(data + "");
+				res.end();
+			});
+		} else if (filePath.endsWith("js")) {
+			fs.readFile(filePath, function(err, data) {
+				res.writeHead(200, {'Content-Type': 'text/javascript'});
+				res.write(data + "");
+				res.end();
+			});
+		} else if (filePath.endsWith("png")) {
+			fs.readFile(filePath, function(err, data) {
+				res.writeHead(200, {'Content-Type': 'image/png'});
+				res.write(data);
+				res.end();
+			});
+		}
+
   }
   //res.write('Hello World!'); //write a response to the client
   
