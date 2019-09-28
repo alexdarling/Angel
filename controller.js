@@ -1,5 +1,6 @@
 var http = require('http');
 var login = require('./login');
+var profile = require('./ProfileHandler');
 var fs = require('fs');
 var url = require('url');
 
@@ -23,7 +24,6 @@ http.createServer(function (req, res) {
 		res.write(""+id);
 		res.end();
   	
-  }
   /*
   else if(q.pathname=="/afterLogin"){
   	
@@ -36,9 +36,20 @@ http.createServer(function (req, res) {
   
   }
   */
-  
-  else if(q.pathname == "/" || q.pathname == ""){
-  
+  } else if (q.pathname == "/create-account") {
+    var qdata = q.query;
+
+    var type = qdata.type;
+    var fname = qdata.fname;
+    var lname = qdata.lname;
+    var imgurl = qdata.imgurl;
+    var description = qdata.description;
+    var tags = qdata.tags;
+    console.log(tags);
+
+    profile.createUser(type, fname, lname, imgurl, description, tags);
+
+  } else if(q.pathname == "/" || q.pathname == ""){0
   	fs.readFile('index.html', function(err, data) {
     	res.writeHead(200, {'Content-Type': 'text/html'});
     	res.write(data+"");
