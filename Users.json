@@ -1,48 +1,62 @@
 {
-
   "1": {
     "type": "angel",
     "fName": "Babe",
     "lName": "Ruth",
     "profileImage": "/users/pic/123456.jpg",
     "description": "I love baseball!",
-    "tags": [ "baseball", "underrepresented communities", "entertainment" ]
+    "tags": [
+      "baseball",
+      "underrepresented communities",
+      "entertainment"
+    ]
   },
-
   "2": {
     "type": "entrepeneur",
     "fName": "John",
     "lName": "Doe",
     "profileImage": "/users/pic/246810.jpg",
     "description": "Building the next generation of face ID technology.",
-    "tags": [ "memebigboi", "poor", "entertaining" ]
+    "tags": [
+      "memebigboi",
+      "poor",
+      "entertaining"
+    ]
   },
-
   "3": {
     "type": "entrepeneur",
     "fName": "Jonothan",
     "lName": "Stealman",
     "profileImage": "/users/pic/1357911.jpg",
     "description": "I want to run a bacon-wrapping machine.",
-    "tags": [ "memebigboi", "rich", "entertaining" ]
+    "tags": [
+      "memebigboi",
+      "rich",
+      "entertaining"
+    ]
   },
-
   "4": {
     "type": "angel",
     "fname": "Alex",
     "lname": "Darling",
     "profilePic": "/users/pic/003994.jpg",
     "description": "I like baseball too. And food!",
-    "tags": ["healthcare","baseball", "food"]
+    "tags": [
+      "healthcare",
+      "baseball",
+      "food"
+    ]
   },
-
   "5": {
     "type": "angels",
     "fname": "Sean",
     "lname": "McLennan",
     "profilePic": "/users/pic/3848440.jpg",
     "description": "I do not like baseball. I am all about fashion and real estate.",
-    "tags": ["real estate", "food", "clothes"]
+    "tags": [
+      "real estate",
+      "food",
+      "clothes"
+    ]
   }
-
 }
