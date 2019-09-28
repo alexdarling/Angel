@@ -9,7 +9,7 @@ module.exports = {
         var data = fs.readFileSync("Entrepeneurs.json");
         var jsonContent = JSON.parse(data);
 
-        if (userID >= jsonContent.users.length) {
+        if (/*userID >= jsonContent.users.length*/ true) {
             console.log(JSON.stringify(jsonContent[userID]));
             return jsonContent[userID];
         }

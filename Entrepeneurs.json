@@ -1,29 +1,30 @@
 {
-    
-      "1":{
-        "fname": "babe",
-        "lname": "ruth",
-        "profilepic": "/users/pic/123456.jpg",
-        "description": "Imma Baseball Boi",
-        "tags": [ "good at baseball", "rich", "entertaining" ]
-      }
-    ,
-    
-      "2":{
-        "fname": "john",
-        "lname": "doe",
-        "profilepic": "/users/pic/246810.jpg",
-        "description": "Nobody Knows Me",
-        "tags": [ "memebigboi", "poor", "entertaining" ]
-      }
-    ,
-    
-      "3":{
-        "fname": "dede",
-        "lname": "den",
-        "profilepic": "/users/pic/1357911.jpg",
-        "description": "Yeet BB",
-        "tags": [ "memebigboi", "rich", "entertaining" ]
-      }
+
+  "1": {
+    "type": "angel",
+    "fName": "babe",
+    "lName": "ruth",
+    "profileImage": "/users/pic/123456.jpg",
+    "description": "Imma Baseball Boi",
+    "tags": [ "good at baseball", "rich", "entertaining" ]
+  },
+
+  "2": {
+    "type": "entrepeneur",
+    "fName": "john",
+    "lName": "doe",
+    "profileImage": "/users/pic/246810.jpg",
+    "description": "Nobody Knows Me",
+    "tags": [ "memebigboi", "poor", "entertaining" ]
+  },
+
+  "3": {
+    "type": "entrepeneur",
+    "fName": "dede",
+    "lName": "den",
+    "profileImage": "/users/pic/1357911.jpg",
+    "description": "Yeet BB",
+    "tags": [ "memebigboi", "rich", "entertaining" ]
+  }
    
 }
